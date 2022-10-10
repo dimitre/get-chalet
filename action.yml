@@ -1,0 +1,34 @@
+name: 'Get Chalet'
+description: 'Installs Chalet'
+author: 'dimitre'
+inputs:
+  version:
+    description: "Wanted version"
+    required: false
+    default: ''
+outputs:
+  version:
+    description: "The version of Chalet which was installed"
+    value: ${{ steps.output_version.outputs.version }}
+runs:
+  using: "composite"
+  steps:
+  
+    - name : Clone source code
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
+        owner: 'chalet-org'
+        repository: 'chalet'
+    - name : Build
+      run: |
+        cd chalet
+        ./build_all.sh
+    # - name : Add to path
+
+branding:
+  icon: "archive"
+  color: "green"
+
+
+
+
