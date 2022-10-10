@@ -1,4 +1,4 @@
-name: CI
+name: ChaletTest
 
 on: [push, pull_request]
 
