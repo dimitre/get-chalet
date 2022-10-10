@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Get Chalet
-        uses: dimitre/get-chalet
+        uses: dimitre/get-chalet@v1
       - name: Is this love?
         run: |
           cd chalet
