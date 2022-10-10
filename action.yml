@@ -20,6 +20,7 @@ runs:
         owner: 'chalet-org'
         repository: 'chalet'
     - name : Build
+      shell: bash    
       run: |
         cd chalet
         ./build_all.sh

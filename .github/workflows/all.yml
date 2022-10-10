@@ -34,6 +34,7 @@ jobs:
       - name: Get Chalet
         uses: dimitre/get-chalet@v1
       - name: Is this love?
+        shell: bash
         run: |
           cd chalet
           ./chalet --version
