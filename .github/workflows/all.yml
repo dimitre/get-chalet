@@ -37,5 +37,10 @@ jobs:
       - name: Is this love?
         shell: bash
         run: |
-          cd chalet
+          if [ "$RUNNER_OS" == "macOs" ]; then
+            cd chalet/build/x86_64-apple-darwin_Release
+          elif [ "$RUNNER_OS" == "Linux" ]; then
+            cd chalet/build/x86_64-apple-darwin_Release
+          fi
           ./chalet --version
+
