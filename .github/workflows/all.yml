@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Get Chalet
-        uses: dimitre/get-chalet@v1
+        uses: dimitre/get-chalet@v2
       - name: Is this love?
         shell: bash
         run: |
