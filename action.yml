@@ -24,7 +24,10 @@ runs:
       run: |
         cd chalet
         ./build_all.sh
+        ./build/**/chalet --version
     # - name : Add to path
+
+# https://github.com/chalet-org/chalet/releases/download/v0.5.6/chalet-universal-apple-darwin.zip
 
 branding:
   icon: "archive"
